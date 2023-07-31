@@ -7,8 +7,7 @@
      
     if($_GET['city']) {
          
-     $urlContents = file_get_contents("http://api.openweathermap.org/data/2.5/weather?q=".urlencode($_GET['city']).",16ac61a07843819a2d6ee0426af0f70c");
-         echo "$urlContents";
+     
         $weatherArray = json_decode($urlContents, true);
          
         if ($weatherArray['cod'] == 200) {
